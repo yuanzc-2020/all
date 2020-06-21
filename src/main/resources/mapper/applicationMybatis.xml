@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bunflp.dao.AcountDao">
+    <select id="selectMa" resultType="User">
+        select * from  jurisdiction.user
+        <where>
+            <if test="uid != null">
+                uid = #{uid}
+            </if>
+        </where>
+    </select>
+
+</mapper>

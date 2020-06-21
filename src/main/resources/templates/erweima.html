@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js网页生成二维码插件qrcode - 站长素材</title>
+<meta charset="utf-8"/>
+
+<script src="../js/qrcode.js"></script>
+
+<style>
+
+	#qrcode{
+		width: 96px;
+		height: 96px;
+		position: relative;
+		margin:50px auto;
+	}
+	button{
+		display: block;
+		width: 120px;
+		height: 45px;
+		background: #0cc;
+		text-align: center;
+		line-height: 45px;
+		border-radius: 45px;
+		margin: auto;
+		border: none;
+		cursor: pointer;
+		color: #fff;
+		outline: none;
+	}
+
+</style>
+
+</head>
+<body>
+
+
+<div id="qrcode"></div>
+
+<button id="send">点击生成二维码</button>
+
+<script>
+window.onload =function(){
+	var qrcode = new QRCode(document.getElementById("qrcode"), {
+		width : 96,//设置宽高
+		height : 96
+	});
+	thisURL = document.URL+"54";
+   
+	document.getElementById("send").onclick =function(){
+		qrcode.makeCode(thisURL);
+	}
+}
+</script>
+
+</body>
+</html>

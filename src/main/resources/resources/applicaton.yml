@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jurisdiction
+    username: root
+    password: qweasd
+
+mybatis:
+  type-aliases-package: com.bunflp.bean
+  mapperLocaltions: classpath:resources/*.xml

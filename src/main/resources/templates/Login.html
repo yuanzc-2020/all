@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../webjars/js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../webjars/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="../webjars/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="../webjars/bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+    <style>
+        #ko{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 750px;
+            top: 300px;
+        }
+        body{
+            width: 100%;
+            height: 1080px;
+            background: url("images/qq1.jpg") no-repeat center;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#test").click(function () {
+                var id = document.getElementById("id");
+                var password = document.getElementById("password");
+               if (id.value == ""||password.value == ""){
+                  alert("请输入正确的id及密码");
+                   return false;
+               }
+            })
+        })
+    </script>
+</head>
+    <body>
+            <center id="ko">
+
+            <form class="form-inline" action="/getUser" method="POST">
+
+                <input type="text" class="form-control" id="id" placeholder="Enter id" name="uid"><br><br>
+
+                <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password"><br><br>
+
+                <button type="submit" class="btn btn-primary">登录</button>
+            </form>
+            </center>
+
+
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+
+    <STYLE>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100%;
+            height: 1080px;
+            background: url("/images/qq1.jpg") no-repeat center;
+        }
+        #a,#b{
+            width: 100%;
+            height: 5%;
+            float: none;
+            text-align: center;
+        }
+
+        #c{
+            width: 100%;
+            height: 880px;
+            float: left;
+            text-align: center;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+        h1{
+            color: whitesmoke;
+        }
+
+    </STYLE>
+    <script>
+        $(function () {
+            $("body").on('mouseover',"div>a",function () {
+                this.style.color = "red";
+                this.style.font = "bold";
+            })
+            $("body").on('mouseout',"div>a",function () {
+                this.style.color = "blue";
+                this.style.font = "bold";
+            })
+        })
+
+    </script>
+
+</head>
+    <body>
+        <div id="a"> <h1> 环球旅行社</h1></div>
+        <div id="b"><a href="homepp.jsp" target="ttt" >首页</a >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <a href="lineInfo.jsp" target="ttt">旅游资讯</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <a href="customInfo.jsp" target="ttt">游客信息录入</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <a href="../Page/guahao.html" target="ttt">黑名单查询</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <a href="hp.html" target="ttt">个人管理</a></div>
+       <div id = "c">
+           <iframe name="ttt" scrolling="no" frameborder="0" ></iframe>
+       </div>
+    </body>
+</html>
